@@ -27,7 +27,7 @@ namespace NGnono.Example.Web.Local4Mvc
             {
                 //从cookie里读取语言设置
                 var cookie = filterContext.HttpContext.Request.Cookies[LangCookieName];
-                var langHeader = string.Empty;
+                var langHeader = String.Empty;
                 if (cookie != null)
                 {
                     //根据cookie设置语言
@@ -85,7 +85,7 @@ namespace NGnono.Example.Web.Local4Mvc
             var queryString = helper.ViewContext.HttpContext.Request.QueryString;
             foreach (string key in queryString)
             {
-                if (queryString[key] != null && !string.IsNullOrWhiteSpace(key))
+                if (queryString[key] != null && !String.IsNullOrWhiteSpace(key))
                 {
                     if (routeValues.ContainsKey(key))
                     {
@@ -105,11 +105,10 @@ namespace NGnono.Example.Web.Local4Mvc
             var urlHelper = new UrlHelper(helper.ViewContext.RequestContext, helper.RouteCollection);
             var url = urlHelper.RouteUrl("Localization", routeValues);
             // check whether the current thread ui culture is this language
-            var current_lang_name = Thread.CurrentThread.CurrentUICulture.Name.ToLower();
-            var isSelected = strictSelected ?
-            current_lang_name == cultureName :
-            current_lang_name.StartsWith(cultureName);
-            return new Language()
+            var currentLangName = Thread.CurrentThread.CurrentUICulture.Name.ToLower();
+            var isSelected = strictSelected ? currentLangName == cultureName : currentLangName.StartsWith(cultureName);
+
+            return new Language
              {
                  Url = url,
                  ActionName = actionName,
@@ -122,7 +121,7 @@ namespace NGnono.Example.Web.Local4Mvc
         public static MvcHtmlString LanguageSelectorLink(this HtmlHelper helper, string cultureName, string selectedText, string unselectedText, IDictionary<string, object> htmlAttributes, string languageRouteName = "lang", bool strictSelected = false)
         {
             var language = helper.LanguageUrl(cultureName, languageRouteName, strictSelected);
-            var link = helper.RouteLink(language.IsSelected ? selectedText : unselectedText,"Localization", language.RouteValues, htmlAttributes);
+            var link = helper.RouteLink(language.IsSelected ? selectedText : unselectedText, "Localization", language.RouteValues, htmlAttributes);
 
             return link;
         }
