@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGnono.Example.Web.Local4Mvc", "NGnono.Example.Web.Local4Mvc\NGnono.Example.Web.Local4Mvc.csproj", "{367E0DF7-1BDF-4A3B-A1FC-6AE758FC469E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "webapi", "webapi", "{83392129-3DB6-4809-B956-17581942CFA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_NGnono.Example.Web.WebApi", "NGnono.Example.Web.WebApi\01_NGnono.Example.Web.WebApi.csproj", "{F0688DB5-14F6-4AAC-A502-BC0484CB00FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_NGnono.Example.Web.WebApi.Hosting", "NGnono.Example.Web.WebApi.Hosting\03_NGnono.Example.Web.WebApi.Hosting.csproj", "{E2830E49-9FA8-480C-ACE2-28FFBBCBFA94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_NGnono.Example.Web.WebApi.Support", "NGnono.Example.Web.WebApi.Support\02_NGnono.Example.Web.WebApi.Support.csproj", "{BD854E91-1E89-4C05-B6DE-F8E9F4A3D8E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +21,25 @@ Global
 		{367E0DF7-1BDF-4A3B-A1FC-6AE758FC469E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{367E0DF7-1BDF-4A3B-A1FC-6AE758FC469E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{367E0DF7-1BDF-4A3B-A1FC-6AE758FC469E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0688DB5-14F6-4AAC-A502-BC0484CB00FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0688DB5-14F6-4AAC-A502-BC0484CB00FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0688DB5-14F6-4AAC-A502-BC0484CB00FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0688DB5-14F6-4AAC-A502-BC0484CB00FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2830E49-9FA8-480C-ACE2-28FFBBCBFA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2830E49-9FA8-480C-ACE2-28FFBBCBFA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2830E49-9FA8-480C-ACE2-28FFBBCBFA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2830E49-9FA8-480C-ACE2-28FFBBCBFA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD854E91-1E89-4C05-B6DE-F8E9F4A3D8E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD854E91-1E89-4C05-B6DE-F8E9F4A3D8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD854E91-1E89-4C05-B6DE-F8E9F4A3D8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD854E91-1E89-4C05-B6DE-F8E9F4A3D8E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F0688DB5-14F6-4AAC-A502-BC0484CB00FF} = {83392129-3DB6-4809-B956-17581942CFA0}
+		{E2830E49-9FA8-480C-ACE2-28FFBBCBFA94} = {83392129-3DB6-4809-B956-17581942CFA0}
+		{BD854E91-1E89-4C05-B6DE-F8E9F4A3D8E5} = {83392129-3DB6-4809-B956-17581942CFA0}
 	EndGlobalSection
 EndGlobal
